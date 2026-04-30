@@ -27,7 +27,7 @@ app.get('/api/health', (req, res) => {
 app.use(express.static('client/dist'));
 
 // SPA fallback - serve index.html for all non-API routes
-app.get('*', (req, res, next) => {
+app.get('/(.*)', (req, res, next) => {
     if (!req.path.startsWith('/api')) {
         res.sendFile(require('path').join(__dirname, '../client/dist/index.html'));
     } else {

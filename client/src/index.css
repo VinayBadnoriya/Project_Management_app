@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+/* Linear/Notion Design System */
+@theme {
+  --color-primary: #4f46e5; /* Indigo 600 */
+  --color-bg-main: #f8fafc;
+  --color-card: #ffffff;
+  --color-border-subtle: #f1f5f9;
+}
+
+@layer base {
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #f8fafc;
+    color: #1e293b;
+    font-family: 'Inter', -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer components {
+  /* Minimalist Card System */
+  .saas-card {
+    @apply bg-white border border-slate-100 shadow-sm transition-all duration-200 ease-in-out;
+  }
+
+  .saas-card:hover {
+    @apply shadow-md -translate-y-0.5;
+  }
+
+  /* Linear-style Sidebar Item */
+  .sidebar-item {
+    @apply flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium text-slate-500 transition-all duration-200;
+  }
+
+  .sidebar-item.active {
+    @apply bg-slate-100 text-slate-900;
+  }
+
+  .sidebar-item:hover:not(.active) {
+    @apply bg-slate-50 text-slate-700;
+  }
+
+  /* Kanban Board Styling */
+  .kanban-column {
+    @apply flex flex-col gap-3 min-w-[300px] bg-slate-50/50 p-4 rounded-xl border border-dashed border-slate-200;
+  }
+
+  /* Status Badges */
+  .badge {
+    @apply px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider;
+  }
+
+  .badge-todo { @apply bg-slate-100 text-slate-600; }
+  .badge-progress { @apply bg-amber-50 text-amber-600; }
+  .badge-done { @apply bg-emerald-50 text-emerald-600; }
+  .badge-urgent { @apply bg-red-50 text-red-600; }
+}
+
+/* Smooth Transitions */
+.page-transition {
+  animation: fadeIn 200ms ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Custom Scrollbar (Minimal) */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-200 rounded-full hover:bg-slate-300;
+}

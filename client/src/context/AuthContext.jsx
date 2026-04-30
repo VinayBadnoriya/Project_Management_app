@@ -18,7 +18,9 @@ export const AuthProvider = ({ children }) => {
     }, []);
 
     const login = async (email, password) => {
+        console.log('🚀 Sending login request...', { email });
         const { data } = await api.post('/auth/login', { email, password });
+        console.log('✅ Login successful:', data);
         const userData = data.data || data;
         localStorage.setItem('user', JSON.stringify(userData));
         setUser(userData);
@@ -26,7 +28,9 @@ export const AuthProvider = ({ children }) => {
     };
 
     const signup = async (name, email, password, role, inviteCode) => {
+        console.log('🚀 Sending signup request...', { name, email, role, inviteCode });
         const { data } = await api.post('/auth/signup', { name, email, password, role, inviteCode });
+        console.log('✅ Signup successful:', data);
         const userData = data.data || data;
         localStorage.setItem('user', JSON.stringify(userData));
         setUser(userData);

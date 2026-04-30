@@ -19,7 +19,7 @@ import Search from '../pages/Search';
 const ProtectedRoute = ({ children, adminOnly = false }) => {
     const { user, loading } = useAuth();
     
-    if (loading) return <div className="h-screen flex items-center justify-center font-bold text-indigo-600">Loading Antigravity...</div>;
+    if (loading) return <div className="h-screen flex items-center justify-center font-bold text-indigo-600">Loading App...</div>;
     if (!user) return <Navigate to="/login" />;
     if (adminOnly && user.role !== 'ADMIN') return <Navigate to="/" />;
     

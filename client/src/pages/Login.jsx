@@ -71,7 +71,7 @@ const Login = () => {
                             <div className="w-12 h-12 bg-indigo-600 rounded-2xl flex items-center justify-center shadow-xl shadow-indigo-600/20">
                                 <LogIn className="text-white" size={24} />
                             </div>
-                            <span className="text-2xl font-black text-slate-900">Antigravity.</span>
+                            <span className="text-2xl font-black text-slate-900">Project Management</span>
                         </div>
                         <h2 className="text-4xl font-extrabold text-slate-900 tracking-tight">Sign In</h2>
                         <p className="text-slate-500 mt-3 text-lg">Enter your details to access your workspace.</p>

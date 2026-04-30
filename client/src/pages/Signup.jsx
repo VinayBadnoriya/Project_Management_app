@@ -51,7 +51,7 @@ const Signup = () => {
                         </span>
                     </h1>
                     <p className="text-xl text-slate-400 leading-relaxed mb-10">
-                        Join thousands of teams using Antigravity to streamline their project management workflow.
+                        Join thousands of teams using our platform to streamline their project management workflow.
                     </p>
                     
                     <div className="grid grid-cols-2 gap-6">
@@ -77,7 +77,7 @@ const Signup = () => {
                             <div className="w-12 h-12 bg-indigo-600 rounded-2xl flex items-center justify-center shadow-xl shadow-indigo-600/20">
                                 <UserPlus className="text-white" size={24} />
                             </div>
-                            <span className="text-2xl font-black text-slate-900">Antigravity.</span>
+                            <span className="text-2xl font-black text-slate-900">Project Management</span>
                         </div>
                         <h2 className="text-4xl font-extrabold text-slate-900 tracking-tight">Create Account</h2>
                         <p className="text-slate-500 mt-3 text-lg">Join our community and start managing projects.</p>

@@ -174,7 +174,7 @@ const Profile = () => {
                         <div className="space-y-6">
                             {[
                                 { action: 'Updated profile details', time: 'Just now' },
-                                { action: 'Joined "Antigravity ERP" workspace', time: 'Yesterday' }
+                                { action: 'Joined Workspace', time: 'Yesterday' }
                             ].map((item, idx) => (
                                 <div key={idx} className="flex items-center gap-4 group">
                                     <div className="w-2 h-2 rounded-full bg-indigo-600 shadow-lg shadow-indigo-200"></div>

@@ -1,4 +1,4 @@
-# Antigravity. | Project Management SaaS
+# Project Management SaaS
 
 A high-fidelity, editorial-style Project Management platform designed for modern enterprise teams. This application focuses on visual excellence, performance, and strict data isolation for a premium SaaS experience.
 
@@ -88,4 +88,4 @@ npm run dev
 - **Memoization**: Optimized React rendering to prevent unnecessary updates.
 
 ---
-Built with ❤️ by the **Antigravity Team**.
+Built with ❤️ for teams everywhere.

@@ -20,7 +20,7 @@ app.use(express.json());
 
 // Root Health Check
 app.get('/api/health', (req, res) => {
-    res.json({ message: 'Antigravity API is healthy', status: 'online' });
+    res.json({ message: 'API is healthy', status: 'online' });
 });
 
 const globalErrorHandler = require('./middleware/error.middleware');

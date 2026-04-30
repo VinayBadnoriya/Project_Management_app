@@ -17,18 +17,18 @@ const seedData = async () => {
         // Clear existing data
         await Project.deleteMany({});
         await Task.deleteMany({});
-        await User.deleteMany({ email: 'admin@antigravity.com' });
+        await User.deleteMany({ email: 'admin@example.com' });
         console.log('🧹 Cleaned existing records.');
 
         // 1. Create Default Admin User
         const hashedPassword = await bcrypt.hash('admin123', 10);
         const adminUser = await User.create({
             name: 'Executive Director',
-            email: 'admin@antigravity.com',
+            email: 'admin@example.com',
             password: hashedPassword,
             role: 'ADMIN'
         });
-        console.log('👤 Admin User Created (admin@antigravity.com / admin123)');
+        console.log('👤 Admin User Created (admin@example.com / admin123)');
 
         // 2. Create High-End Enterprise Projects
         const projects = await Project.insertMany([

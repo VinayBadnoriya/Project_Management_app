@@ -4,7 +4,7 @@
   "description": "A professional ERP-style project management application",
   "main": "server/server.js",
   "scripts": {
-    "start": "node server/server.js",
+    "start": "npm run build --prefix client && node server/server.js",
     "server": "nodemon server/server.js",
     "client": "npm run dev --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""

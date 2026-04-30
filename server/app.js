@@ -18,9 +18,16 @@ app.use(cors({
 }));
 app.use(express.json());
 
-// Trigger Build: Production Sync 2026-04-30
-app.get('/', (req, res) => {
-    res.json({ message: 'Antigravity API is running...', status: 'healthy' });
+// Serve static files from client build
+app.use(express.static('client/dist'));
+
+// SPA fallback - serve index.html for all non-API routes
+app.get('*', (req, res, next) => {
+    if (!req.path.startsWith('/api')) {
+        res.sendFile(require('path').join(__dirname, '../client/dist/index.html'));
+    } else {
+        next();
+    }
 });
 
 const globalErrorHandler = require('./middleware/error.middleware');

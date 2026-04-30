@@ -18,6 +18,11 @@ app.use(cors({
 }));
 app.use(express.json());
 
+// Root Health Check
+app.get('/api/health', (req, res) => {
+    res.json({ message: 'Antigravity API is healthy', status: 'online' });
+});
+
 // Serve static files from client build
 app.use(express.static('client/dist'));
 

@@ -10,8 +10,15 @@ const userRoutes = require('./routes/user.routes');
 
 const app = express();
 
-app.use(cors());
+// Enable CORS for all origins (Flexible for Vercel deployment)
+app.use(cors({
+    origin: '*',
+    methods: ['GET', 'POST', 'PATCH', 'DELETE', 'PUT', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
 app.use(express.json());
+
+// Trigger Build: Production Sync 2026-04-30
 
 const globalErrorHandler = require('./middleware/error.middleware');
 

@@ -19,6 +19,9 @@ app.use(cors({
 app.use(express.json());
 
 // Trigger Build: Production Sync 2026-04-30
+app.get('/', (req, res) => {
+    res.json({ message: 'Antigravity API is running...', status: 'healthy' });
+});
 
 const globalErrorHandler = require('./middleware/error.middleware');
 

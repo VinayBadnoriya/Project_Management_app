@@ -4,10 +4,11 @@
   "description": "A professional ERP-style project management application",
   "main": "server/server.js",
   "scripts": {
-    "start": "npm install --prefix client && npm run build --prefix client && node server/server.js",
+    "start": "node init && npm install --prefix client && npm run build --prefix client && node server/server.js",
+    "build": "node init && npm run build --prefix client",
     "server": "nodemon server/server.js",
     "client": "npm run dev --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "node init && concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [],
   "author": "",
@@ -19,7 +20,6 @@
   "dependencies": {
     "bcryptjs": "^3.0.3",
     "cors": "^2.8.6",
-    "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.6.0",
